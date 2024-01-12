@@ -3,7 +3,7 @@
 This project is an example implementation of an AWS MediaLive Source Monitoring solution using AWS Rekognition. Deployment is via AWS Cloud Development Kit (CDK) and Python.
 
 This repository contains all code artifacts for the following blog post:
-[MediaLive Source Monitoring via Rekognition](https://aws.amazon.com/blogs/database/medialive-source-monitoring-via-rekognition/)
+1. [MediaLive Source Monitoring via Rekognition](https://aws.amazon.com/blogs/media/source-monitoring-for-aws-elemental-medialive-via-amazon-rekognition/)
 
 
 
@@ -25,8 +25,15 @@ This section shows how to prepare the environment for running CDK and the sample
 * An [AWS account](https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fportal.aws.amazon.com%2Fbilling%2Fsignup%2Fresume&client_id=signup).
 * An IAM user with administrator access
 * [Configured AWS credentials](https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html#getting_started_prerequisites)
-* Installed Node.js, Python 3, and pip. 
+* Installed Node.js, Python 3, and pip.
 * Docker cli installed
+
+While deploying this code you will be making use of the following services which could incur charges in your account:
+* [Amazon Fargate](https://aws.amazon.com/fargate/)
+* [Amazon Rekognition](https://aws.amazon.com/rekognition/)
+* [Amazon EventBridge](https://aws.amazon.com/eventbridge/)
+* [Amazon Simple Queue Service (SQS)](https://aws.amazon.com/sqs/)
+* [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/)
 
 $~$
 
@@ -90,13 +97,10 @@ cdk destroy
 ```
 
 # Notes
-This example solution will begin analysing thumbnails on any running channel in the account where it is deployed once active. Care should be taken not to exceed the [API quota](https://docs.aws.amazon.com/medialive/latest/ug/limits-api.html) for thumbnails on the account if are a lot of active encoding pipelines. The solution however could be extended by using MediaLive [tags](https://docs.aws.amazon.com/medialive/latest/ug/tagging.html) to control which channels are included/excluded from analysis.
-
+This example solution will begin analysing thumbnails on any running channel in the account where it is deployed once active. Care should be taken not to exceed the [API quota](https://docs.aws.amazon.com/medialive/latest/ug/limits-api.html) for thumbnails on the account if are a lot of active encoding pipelines. T>
 
 # Security
-
 See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
 
 # License
-
-This library is licensed under the MIT-0 License. See the LICENSE file.
+This library is licensed under the MIT-0 License. See the [LICENSE](LICENSE.txt) file.
