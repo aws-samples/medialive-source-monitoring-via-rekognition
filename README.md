@@ -3,7 +3,7 @@
 This project is an example implementation of an AWS MediaLive Source Monitoring solution using AWS Rekognition. Deployment is via AWS Cloud Development Kit (CDK) and Python.
 
 This repository contains all code artifacts for the following blog post:
-1. [MediaLive Source Monitoring via Rekognition](https://aws.amazon.com/blogs/database/medialive-source-monitoring-via-rekognition/)
+[MediaLive Source Monitoring via Rekognition](https://aws.amazon.com/blogs/database/medialive-source-monitoring-via-rekognition/)
 
 
 
